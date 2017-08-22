@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     var possibleMove = Array<Int>()
     var nextMove: Int? = nil
     var playerTurn = 1
-    let allSpaces: Set<Int> = [1,2,3,4,5,6,7,8,9]
+    let allSpaces = [1,2,3,4,5,6,7,8,9]
     
     
     @IBAction func newGameButtonClicked(_ sender: AnyObject) {
@@ -45,12 +45,28 @@ class ViewController: UIViewController {
                 playerOneMoves.insert(sender.tag)// here, i am adding the tag to playerOneMoves set
                 sender.setTitle("X", for: UIControlState.normal)//after he clicks, the title is set to x in normal state
                 statusLabel.text = "PLayer 2's turn"
-                if isWinner(player: playerTurn) == 0 {
+                if isWinner(player: 1) == 0 {
                     
-                }
+                    let nextMove = playDefense()
+                    playerTwoMoves.insert(nextMove)
+                    let button = self.view.viewWithTag(nextMove) as! UIButton
+                    button.setTitle("O", for: UIControlState.normal)
+                    statusLabel.text = "Player 1's turn"
+                    isWinner(player: 2)
+               }
                 
             }
+            playerTurn += 1
+            if playerTurn > 9 && isWinner(player: 1) < 1{
+                statusLabel.text = "It's a draw"
+                for index in 1...9 {
+                    let button = self.view.viewWithTag(index) as! UIButton
+                    button.isEnabled = false
+            }
+                
         }
+            
+    }
         
 }
     
@@ -73,6 +89,11 @@ class ViewController: UIViewController {
         tile.setTitle("", for: UIControlState.normal)// here, after i renabled the uibuttons, i am setting the titles of my tags to nil i.e. ""
             }
     }
+    
+    
+    
+    
+    
     
     func isWinner(player: Int) -> Int {
         
@@ -100,7 +121,7 @@ class ViewController: UIViewController {
     func playDefense() -> Int {
         var possibleLosses = Array<Array<Int>>()
         var possibleWins = Array<Array<Int>>()
-        let spacesLeft =  allSpaces.subtract(playerOneMoves.union(playerTwoMoves))
+        let spacesLeft =  Array(Set(allSpaces).subtracting(playerOneMoves.union(playerTwoMoves)))
         
         
         for combination in winningCombinations{
@@ -146,14 +167,16 @@ class ViewController: UIViewController {
         if possibleMove.count > 0 {
             nextMove = possibleMove[Int(arc4random_uniform(UInt32(possibleMove.count)))]
         }else if spacesLeft.count > 0{
-            nextMove = spacesLeft[spacesLeft.startIndex.advancedBy(Int(arc4random_uniform(UInt32(spacesLeft.count))))]
-            
+            nextMove = spacesLeft[spacesLeft.startIndex.advanced(by: Int(arc4random_uniform(UInt32(spacesLeft.count))))]
         }
-      playerTurn ++
-        return nextMove!
+        
+        possibleMove.removeAll()
+        possibleLosses.removeAll()
+        possibleWins.removeAll()
+        playerTurn += 1
+        return  nextMove!
     }
     
-
 
 
     
