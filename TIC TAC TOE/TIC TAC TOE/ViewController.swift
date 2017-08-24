@@ -21,6 +21,10 @@ class ViewController: UIViewController {
 @IBOutlet weak var button7: UIButton!
 @IBOutlet weak var button8: UIButton!
 @IBOutlet weak var button9: UIButton!
+var newGame1: Bool = false// This is to help activate newGame() when using new game segue
+    
+    @IBAction func leaveGameButton(_ sender: UIButton) {
+    }
     
     let winningCombinations = [[1,2,3], [4,5,6], [7,8,9], [1,4,7], [2,5,8], [3,6,9],
                                [1,5,9], [3,5,7]]
@@ -179,14 +183,23 @@ class ViewController: UIViewController {
     
 
 
+    override func viewWillAppear(_ animated: Bool) {
+        if (self.newGame1) {
+          
+            self.newGame()
+            
+        }
     
     
+    }
     
     
+   
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

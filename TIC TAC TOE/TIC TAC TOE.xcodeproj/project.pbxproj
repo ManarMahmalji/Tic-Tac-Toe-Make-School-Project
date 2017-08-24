@@ -14,6 +14,8 @@
 		290A7A841F49AD940079F973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 290A7A821F49AD940079F973 /* LaunchScreen.storyboard */; };
 		290A7A8F1F49AD940079F973 /* TIC_TAC_TOETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290A7A8E1F49AD940079F973 /* TIC_TAC_TOETests.swift */; };
 		290A7A9A1F49AD940079F973 /* TIC_TAC_TOEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290A7A991F49AD940079F973 /* TIC_TAC_TOEUITests.swift */; };
+		290C7F811F4F001C0062352F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 290C7F7F1F4F001C0062352F /* Model.xcdatamodeld */; };
+		29BA8C661F4E097F00CE207E /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BA8C651F4E097F00CE207E /* WelcomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		290A7A951F49AD940079F973 /* TIC TAC TOEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TIC TAC TOEUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		290A7A991F49AD940079F973 /* TIC_TAC_TOEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIC_TAC_TOEUITests.swift; sourceTree = "<group>"; };
 		290A7A9B1F49AD940079F973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		290C7F801F4F001C0062352F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		29BA8C651F4E097F00CE207E /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		290A7A6D1F49AD940079F973 = {
 			isa = PBXGroup;
 			children = (
+				290C7F7E1F4F00050062352F /* Models */,
 				290A7A781F49AD940079F973 /* TIC TAC TOE */,
 				290A7A8D1F49AD940079F973 /* TIC TAC TOETests */,
 				290A7A981F49AD940079F973 /* TIC TAC TOEUITests */,
@@ -99,6 +104,7 @@
 			children = (
 				290A7A791F49AD940079F973 /* AppDelegate.swift */,
 				290A7A7B1F49AD940079F973 /* ViewController.swift */,
+				29BA8C651F4E097F00CE207E /* WelcomePageViewController.swift */,
 				290A7A7D1F49AD940079F973 /* Main.storyboard */,
 				290A7A801F49AD940079F973 /* Assets.xcassets */,
 				290A7A821F49AD940079F973 /* LaunchScreen.storyboard */,
@@ -123,6 +129,14 @@
 				290A7A9B1F49AD940079F973 /* Info.plist */,
 			);
 			path = "TIC TAC TOEUITests";
+			sourceTree = "<group>";
+		};
+		290C7F7E1F4F00050062352F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				290C7F7F1F4F001C0062352F /* Model.xcdatamodeld */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				290A7A7C1F49AD940079F973 /* ViewController.swift in Sources */,
+				29BA8C661F4E097F00CE207E /* WelcomePageViewController.swift in Sources */,
 				290A7A7A1F49AD940079F973 /* AppDelegate.swift in Sources */,
+				290C7F811F4F001C0062352F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +521,7 @@
 				290A7AA01F49AD940079F973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		290A7AA11F49AD940079F973 /* Build configuration list for PBXNativeTarget "TIC TAC TOETests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +530,7 @@
 				290A7AA31F49AD940079F973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		290A7AA41F49AD940079F973 /* Build configuration list for PBXNativeTarget "TIC TAC TOEUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,8 +539,22 @@
 				290A7AA61F49AD940079F973 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		290C7F7F1F4F001C0062352F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				290C7F801F4F001C0062352F /* Model.xcdatamodel */,
+			);
+			currentVersion = 290C7F801F4F001C0062352F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 290A7A6E1F49AD940079F973 /* Project object */;
 }
