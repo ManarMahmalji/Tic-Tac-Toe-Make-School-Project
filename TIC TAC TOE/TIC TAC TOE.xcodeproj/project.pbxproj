@@ -15,6 +15,7 @@
 		290A7A8F1F49AD940079F973 /* TIC_TAC_TOETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290A7A8E1F49AD940079F973 /* TIC_TAC_TOETests.swift */; };
 		290A7A9A1F49AD940079F973 /* TIC_TAC_TOEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290A7A991F49AD940079F973 /* TIC_TAC_TOEUITests.swift */; };
 		290C7F811F4F001C0062352F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 290C7F7F1F4F001C0062352F /* Model.xcdatamodeld */; };
+		290C7F851F4F0B940062352F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290C7F841F4F0B940062352F /* CoreDataHelper.swift */; };
 		29BA8C661F4E097F00CE207E /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BA8C651F4E097F00CE207E /* WelcomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		290A7A991F49AD940079F973 /* TIC_TAC_TOEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIC_TAC_TOEUITests.swift; sourceTree = "<group>"; };
 		290A7A9B1F49AD940079F973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		290C7F801F4F001C0062352F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		290C7F841F4F0B940062352F /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		29BA8C651F4E097F00CE207E /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 		290A7A6D1F49AD940079F973 = {
 			isa = PBXGroup;
 			children = (
+				290C7F831F4F0AFC0062352F /* Helpers */,
 				290C7F7E1F4F00050062352F /* Models */,
 				290A7A781F49AD940079F973 /* TIC TAC TOE */,
 				290A7A8D1F49AD940079F973 /* TIC TAC TOETests */,
@@ -137,6 +140,14 @@
 				290C7F7F1F4F001C0062352F /* Model.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		290C7F831F4F0AFC0062352F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				290C7F841F4F0B940062352F /* CoreDataHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290C7F851F4F0B940062352F /* CoreDataHelper.swift in Sources */,
 				290A7A7C1F49AD940079F973 /* ViewController.swift in Sources */,
 				29BA8C661F4E097F00CE207E /* WelcomePageViewController.swift in Sources */,
 				290A7A7A1F49AD940079F973 /* AppDelegate.swift in Sources */,

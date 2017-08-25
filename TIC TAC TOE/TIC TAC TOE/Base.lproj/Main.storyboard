@@ -317,7 +317,6 @@
                                     <color key="titleColor" red="0.3257474549484658" green="0.93408367506743684" blue="0.45671563403115645" alpha="0.23892337328767124" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="leaveGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imS-9R-w8H"/>
                                     <segue destination="4ol-Ax-OaF" kind="unwind" identifier="leaveGameButtonTapped" unwindAction="unwindToWelcomeOageViewController:" id="BGc-78-XIJ"/>
                                 </connections>
                             </button>
@@ -375,6 +374,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kj7-5q-oQZ"/>
+        <segue reference="6kJ-mg-9kD"/>
     </inferredMetricsTieBreakers>
 </document>

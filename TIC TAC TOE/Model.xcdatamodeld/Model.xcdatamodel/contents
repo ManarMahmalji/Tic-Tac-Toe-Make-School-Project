@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="TicTaToeRsumeGame" representedClassName="TicTaToeRsumeGame" syncable="YES" codeGenerationType="class">
+    <entity name="TicTaToeRsumedGame" representedClassName=".TicTaToeRsumedGame" syncable="YES" codeGenerationType="class">
         <attribute name="nextMove" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="playerOneMoves" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="playerTurn" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -8,6 +8,6 @@
         <attribute name="possibleMove" optional="YES" attributeType="Transformable" syncable="YES"/>
     </entity>
     <elements>
-        <element name="TicTaToeRsumeGame" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="TicTaToeRsumedGame" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

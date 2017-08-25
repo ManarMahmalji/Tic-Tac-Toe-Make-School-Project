@@ -10,22 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
     
-@IBOutlet weak var statusLabel: UILabel!
-@IBOutlet weak var newGameButton: UIButton!
-@IBOutlet weak var button1: UIButton!
-@IBOutlet weak var button2: UIButton!
-@IBOutlet weak var button3: UIButton!
-@IBOutlet weak var button4: UIButton!
-@IBOutlet weak var button5: UIButton!
-@IBOutlet weak var button6: UIButton!
-@IBOutlet weak var button7: UIButton!
-@IBOutlet weak var button8: UIButton!
-@IBOutlet weak var button9: UIButton!
-var newGame1: Bool = false// This is to help activate newGame() when using new game segue
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var newGameButton: UIButton!
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    @IBOutlet weak var button6: UIButton!
+    @IBOutlet weak var button7: UIButton!
+    @IBOutlet weak var button8: UIButton!
+    @IBOutlet weak var button9: UIButton!
+    var newGame1: Bool = false// This is to help activate newGame() when using new game segue
+    var game: TicTaToeRsumedGame?
     
-    @IBAction func leaveGameButton(_ sender: UIButton) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        game = CoreDataHelper.retrieveSavedGame()
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
+   
     let winningCombinations = [[1,2,3], [4,5,6], [7,8,9], [1,4,7], [2,5,8], [3,6,9],
                                [1,5,9], [3,5,7]]
     var playerOneMoves = Set<Int>()
@@ -75,6 +80,14 @@ var newGame1: Bool = false// This is to help activate newGame() when using new g
 }
     
     
+    
+    
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "leaveGameButtonTapped" {
+                CoreDataHelper.saveGame()
+            }
+        }
+        
     
     
     
@@ -197,11 +210,7 @@ var newGame1: Bool = false// This is to help activate newGame() when using new g
    
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

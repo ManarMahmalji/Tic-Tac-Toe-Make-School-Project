@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 class WelcomePageViewController: UIViewController{
-    
+    var game :TicTaToeRsumedGame?
     @IBAction func unwindToWelcomeOageViewController(_ segue: UIStoryboardSegue) {
+        self.game = CoreDataHelper.retrieveSavedGame()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -20,7 +21,10 @@ class WelcomePageViewController: UIViewController{
                 destination.newGame1 = true
                 
             
-        }
+            }else if identifier == "resumeGameButtonTapped"{
+                CoreDataHelper.retrieveSavedGame()
+                
+            }
         
     }
     
